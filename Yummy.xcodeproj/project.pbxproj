@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		A1B51B0028BD63A30008EA99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51AFF28BD63A30008EA99 /* AppDelegate.swift */; };
 		A1B51B0228BD63A30008EA99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B0128BD63A30008EA99 /* SceneDelegate.swift */; };
-		A1B51B0428BD63A30008EA99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B0328BD63A30008EA99 /* ViewController.swift */; };
 		A1B51B0728BD63A30008EA99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B51B0528BD63A30008EA99 /* Main.storyboard */; };
 		A1B51B0928BD63AC0008EA99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B51B0828BD63AC0008EA99 /* Assets.xcassets */; };
 		A1B51B0C28BD63AC0008EA99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B51B0A28BD63AC0008EA99 /* LaunchScreen.storyboard */; };
+		A1B51B1828BE1B2A0008EA99 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B1728BE1B2A0008EA99 /* OnboardingViewController.swift */; };
+		A1B51B1B28BE1DD20008EA99 /* UiViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B1A28BE1DD20008EA99 /* UiViewExtention.swift */; };
+		A1B51B1D28BE248A0008EA99 /* OnboardingSlideStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B1C28BE248A0008EA99 /* OnboardingSlideStruct.swift */; };
+		A1B51B1F28BE255A0008EA99 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B1E28BE255A0008EA99 /* OnboardingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A1B51AFC28BD63A30008EA99 /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B51AFF28BD63A30008EA99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1B51B0128BD63A30008EA99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1B51B0328BD63A30008EA99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1B51B0628BD63A30008EA99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1B51B0828BD63AC0008EA99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1B51B0B28BD63AC0008EA99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1B51B0D28BD63AC0008EA99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1B51B1728BE1B2A0008EA99 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A1B51B1A28BE1DD20008EA99 /* UiViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewExtention.swift; sourceTree = "<group>"; };
+		A1B51B1C28BE248A0008EA99 /* OnboardingSlideStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideStruct.swift; sourceTree = "<group>"; };
+		A1B51B1E28BE255A0008EA99 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		A1B51AFE28BD63A30008EA99 /* Yummy */ = {
 			isa = PBXGroup;
 			children = (
+				A1B51B1928BE1DA90008EA99 /* Extentions */,
+				A1B51B1528BE18760008EA99 /* Custom View */,
+				A1B51B1428BE186E0008EA99 /* View */,
+				A1B51B1328BE18660008EA99 /* Model */,
 				A1B51AFF28BD63A30008EA99 /* AppDelegate.swift */,
 				A1B51B0128BD63A30008EA99 /* SceneDelegate.swift */,
-				A1B51B0328BD63A30008EA99 /* ViewController.swift */,
 				A1B51B0528BD63A30008EA99 /* Main.storyboard */,
 				A1B51B0828BD63AC0008EA99 /* Assets.xcassets */,
 				A1B51B0A28BD63AC0008EA99 /* LaunchScreen.storyboard */,
 				A1B51B0D28BD63AC0008EA99 /* Info.plist */,
 			);
 			path = Yummy;
+			sourceTree = "<group>";
+		};
+		A1B51B1328BE18660008EA99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1B51B1C28BE248A0008EA99 /* OnboardingSlideStruct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1B51B1428BE186E0008EA99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1B51B1628BE187E0008EA99 /* Onboarding */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1B51B1528BE18760008EA99 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		A1B51B1628BE187E0008EA99 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A1B51B1728BE1B2A0008EA99 /* OnboardingViewController.swift */,
+				A1B51B1E28BE255A0008EA99 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A1B51B1928BE1DA90008EA99 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				A1B51B1A28BE1DD20008EA99 /* UiViewExtention.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1B51B0428BD63A30008EA99 /* ViewController.swift in Sources */,
 				A1B51B0028BD63A30008EA99 /* AppDelegate.swift in Sources */,
 				A1B51B0228BD63A30008EA99 /* SceneDelegate.swift in Sources */,
+				A1B51B1D28BE248A0008EA99 /* OnboardingSlideStruct.swift in Sources */,
+				A1B51B1828BE1B2A0008EA99 /* OnboardingViewController.swift in Sources */,
+				A1B51B1B28BE1DD20008EA99 /* UiViewExtention.swift in Sources */,
+				A1B51B1F28BE255A0008EA99 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
