@@ -16,6 +16,7 @@
 		A1B51B1B28BE1DD20008EA99 /* UiViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B1A28BE1DD20008EA99 /* UiViewExtention.swift */; };
 		A1B51B1D28BE248A0008EA99 /* OnboardingSlideStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B1C28BE248A0008EA99 /* OnboardingSlideStruct.swift */; };
 		A1B51B1F28BE255A0008EA99 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B1E28BE255A0008EA99 /* OnboardingCollectionViewCell.swift */; };
+		A1B51B4628BE75EE0008EA99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B4528BE75EE0008EA99 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A1B51B1A28BE1DD20008EA99 /* UiViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewExtention.swift; sourceTree = "<group>"; };
 		A1B51B1C28BE248A0008EA99 /* OnboardingSlideStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideStruct.swift; sourceTree = "<group>"; };
 		A1B51B1E28BE255A0008EA99 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1B51B4528BE75EE0008EA99 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		A1B51B1428BE186E0008EA99 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A1B51B4428BE75D00008EA99 /* Home */,
 				A1B51B1628BE187E0008EA99 /* Onboarding */,
 			);
 			path = View;
@@ -114,6 +117,14 @@
 				A1B51B1A28BE1DD20008EA99 /* UiViewExtention.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		A1B51B4428BE75D00008EA99 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A1B51B4528BE75EE0008EA99 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 				A1B51B1D28BE248A0008EA99 /* OnboardingSlideStruct.swift in Sources */,
 				A1B51B1828BE1B2A0008EA99 /* OnboardingViewController.swift in Sources */,
 				A1B51B1B28BE1DD20008EA99 /* UiViewExtention.swift in Sources */,
+				A1B51B4628BE75EE0008EA99 /* HomeViewController.swift in Sources */,
 				A1B51B1F28BE255A0008EA99 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
