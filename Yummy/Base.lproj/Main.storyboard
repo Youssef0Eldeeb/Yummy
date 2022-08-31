@@ -476,7 +476,38 @@
             </objects>
             <point key="canvasLocation" x="2485.5140186915887" y="64.794816414686835"/>
         </scene>
+        <!--List Dishes View Controller-->
+        <scene sceneID="KXn-SA-K6Y">
+            <objects>
+                <viewController storyboardIdentifier="ListDishesViewController" id="gdQ-8X-nfG" customClass="ListDishesViewController" customModule="Yummy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="phS-Gi-XKK">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gvq-ik-Bng">
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ai8-Zt-N9q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ai8-Zt-N9q" firstAttribute="trailing" secondItem="Gvq-ik-Bng" secondAttribute="trailing" id="0Ct-Nk-sP5"/>
+                            <constraint firstItem="Ai8-Zt-N9q" firstAttribute="bottom" secondItem="Gvq-ik-Bng" secondAttribute="bottom" id="Bs2-nm-J7I"/>
+                            <constraint firstItem="Gvq-ik-Bng" firstAttribute="leading" secondItem="Ai8-Zt-N9q" secondAttribute="leading" id="U00-gJ-9nl"/>
+                            <constraint firstItem="Gvq-ik-Bng" firstAttribute="top" secondItem="Ai8-Zt-N9q" secondAttribute="top" id="p1e-eZ-4L0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dishesTableView" destination="Gvq-ik-Bng" id="6Yj-VU-zVE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQT-vS-8bp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3360" y="65"/>
+        </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="cart.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
