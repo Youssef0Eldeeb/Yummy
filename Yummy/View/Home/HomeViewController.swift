@@ -12,9 +12,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     @IBOutlet weak var popularCollectioinView: UICollectionView!
-    var categories: [DishCategoryStruct] = [.init(id: "1", name: "Chicken", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539796174.jpeg"),.init(id: "1", name: "Chicken", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539796174.jpeg"),.init(id: "1", name: "Chicken", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539796174.jpeg"),.init(id: "1", name: "Chicken", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539796174.jpeg"),.init(id: "1", name: "Chicken", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539796174.jpeg"),.init(id: "1", name: "Chicken", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539796174.jpeg"),.init(id: "1", name: "Chicken", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539796174.jpeg"),.init(id: "1", name: "Chicken", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539796174.jpeg"),.init(id: "1", name: "Chicken", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539796174.jpeg"),.init(id: "1", name: "Chicken", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/3/1/FNM_070111-Fried-Chicken-026_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539796174.jpeg")]
+    
+    @IBOutlet weak var chefSpiecialCollectionView: UICollectionView!
+    
+    var categories: [DishCategoryStruct] = [.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354")]
     
     var populars: [PopularDishStruct] = [
+        .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 200),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 20),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 332),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323)
+    ]
+    
+    var specials: [PopularDishStruct] = [
         .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 200),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 20),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 332),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323)
     ]
     
@@ -26,13 +33,16 @@ class HomeViewController: UIViewController {
         popularCollectioinView.delegate = self
         popularCollectioinView.dataSource = self
         
+        chefSpiecialCollectionView.delegate = self
+        chefSpiecialCollectionView.dataSource = self
+        
         registerCell()
     }
     
     private func registerCell(){
         categoryCollectionView.register(UINib(nibName: CatagoryCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: CatagoryCollectionViewCell.identifire)
         popularCollectioinView.register(UINib(nibName: PopularDishCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: PopularDishCollectionViewCell.identifire)
-        
+        chefSpiecialCollectionView.register(UINib(nibName: ChefSpecialsCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: ChefSpecialsCollectionViewCell.identifire)
     }
 }
 
@@ -46,6 +56,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return categories.count
         case popularCollectioinView:
             return populars.count
+        case chefSpiecialCollectionView:
+            return specials.count
         default: return 0
         }
     }
@@ -60,6 +72,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case popularCollectioinView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularDishCollectionViewCell.identifire, for: indexPath) as! PopularDishCollectionViewCell
             cell.setup(dish: populars[indexPath.row])
+            
+            return cell
+        case chefSpiecialCollectionView:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChefSpecialsCollectionViewCell.identifire, for: indexPath) as! ChefSpecialsCollectionViewCell
+            cell.setup(dish: specials[indexPath.row])
             
             return cell
         default: return UICollectionViewCell()

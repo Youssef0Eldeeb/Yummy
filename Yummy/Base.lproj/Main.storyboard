@@ -168,7 +168,7 @@
                                                                     </label>
                                                                     <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fy5-B1-B06">
                                                                         <rect key="frame" x="0.0" y="40" width="428" height="122"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="122" id="ZYK-G8-CSr"/>
                                                                         </constraints>
@@ -192,7 +192,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="oCl-tp-rho" firstAttribute="top" secondItem="UgU-gS-yD7" secondAttribute="top" id="Cob-Eh-Caa"/>
                                                             <constraint firstAttribute="trailing" secondItem="oCl-tp-rho" secondAttribute="trailing" id="In6-LN-GAM"/>
@@ -217,7 +217,7 @@
                                                                     </label>
                                                                     <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pwf-PJ-xU8">
                                                                         <rect key="frame" x="0.0" y="40" width="428" height="300"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="300" id="VMP-Mu-cov"/>
                                                                         </constraints>
@@ -241,7 +241,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="388" id="4qU-kZ-YZS"/>
                                                             <constraint firstAttribute="trailing" secondItem="RQd-0B-bc8" secondAttribute="trailing" id="86M-MR-KNm"/>
@@ -264,24 +264,24 @@
                                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ojY-FN-CND">
+                                                                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ojY-FN-CND">
                                                                         <rect key="frame" x="0.0" y="40" width="428" height="120"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="120" id="wXs-x8-ZrU"/>
                                                                         </constraints>
-                                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="neL-Ur-ZVd">
-                                                                            <size key="itemSize" width="128" height="128"/>
+                                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="neL-Ur-ZVd">
+                                                                            <size key="itemSize" width="128" height="120"/>
                                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                                            <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                                                         </collectionViewFlowLayout>
                                                                         <cells>
                                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jN0-EW-tFO">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                                <rect key="frame" x="15" y="0.0" width="128" height="120"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NTj-oY-bJo">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="120"/>
                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                 </collectionViewCellContentView>
                                                                             </collectionViewCell>
@@ -290,7 +290,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="210" id="C0m-T8-VMt"/>
                                                             <constraint firstAttribute="trailing" secondItem="3EH-bW-W2E" secondAttribute="trailing" id="Eap-5p-OVh"/>
@@ -301,7 +301,6 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="JCS-uA-WhW" secondAttribute="trailing" id="2pt-VB-0SI"/>
                                             <constraint firstAttribute="bottom" secondItem="JCS-uA-WhW" secondAttribute="bottom" id="7yO-KH-qcB"/>
@@ -337,6 +336,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryCollectionView" destination="Fy5-B1-B06" id="xI8-ne-buL"/>
+                        <outlet property="chefSpiecialCollectionView" destination="ojY-FN-CND" id="Hu1-O3-Jhw"/>
                         <outlet property="popularCollectioinView" destination="pwf-PJ-xU8" id="n5i-AE-gp1"/>
                     </connections>
                 </viewController>
