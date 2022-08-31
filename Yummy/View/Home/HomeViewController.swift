@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     var categories: [DishCategoryStruct] = [.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354")]
     
     var populars: [PopularDishStruct] = [
-        .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 200),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 20),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 332),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323)
+        .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of caloriesthis foood is very very yummy but contains on alots of caloriesthis foood is very very yummy but contains on alots of caloriesthis foood is very very yummy but contains on alots of caloriesthis foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 200),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 20),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 332),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323)
     ]
     
     var specials: [PopularDishStruct] = [
@@ -83,6 +83,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoryCollectionView {
+            
+        }else{
+            let controller = DishDetailsViewController.instantiate()
+            controller.dish = collectionView == popularCollectioinView ? populars[indexPath.row] : specials[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
     

@@ -13,6 +13,8 @@
 		A15EB42828BF74D500EFCEA9 /* PopularDishStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EB42728BF74D500EFCEA9 /* PopularDishStruct.swift */; };
 		A15EB43128BFB0BE00EFCEA9 /* ChefSpecialsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EB42F28BFB0BE00EFCEA9 /* ChefSpecialsCollectionViewCell.swift */; };
 		A15EB43228BFB0BE00EFCEA9 /* ChefSpecialsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15EB43028BFB0BE00EFCEA9 /* ChefSpecialsCollectionViewCell.xib */; };
+		A15EB43528BFD0C000EFCEA9 /* DishDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EB43428BFD0C000EFCEA9 /* DishDetailsViewController.swift */; };
+		A15EB43728BFD64300EFCEA9 /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EB43628BFD64300EFCEA9 /* UIViewControllerExtention.swift */; };
 		A1B51B0028BD63A30008EA99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51AFF28BD63A30008EA99 /* AppDelegate.swift */; };
 		A1B51B0228BD63A30008EA99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B0128BD63A30008EA99 /* SceneDelegate.swift */; };
 		A1B51B0728BD63A30008EA99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B51B0528BD63A30008EA99 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		A15EB42728BF74D500EFCEA9 /* PopularDishStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDishStruct.swift; sourceTree = "<group>"; };
 		A15EB42F28BFB0BE00EFCEA9 /* ChefSpecialsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefSpecialsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A15EB43028BFB0BE00EFCEA9 /* ChefSpecialsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChefSpecialsCollectionViewCell.xib; sourceTree = "<group>"; };
+		A15EB43428BFD0C000EFCEA9 /* DishDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailsViewController.swift; sourceTree = "<group>"; };
+		A15EB43628BFD64300EFCEA9 /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
 		A1B51AFC28BD63A30008EA99 /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B51AFF28BD63A30008EA99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1B51B0128BD63A30008EA99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,14 @@
 			path = ChefSpecialsCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		A15EB43328BFD08700EFCEA9 /* DishDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A15EB43428BFD0C000EFCEA9 /* DishDetailsViewController.swift */,
+			);
+			path = DishDetails;
+			sourceTree = "<group>";
+		};
 		A1B51AF328BD63A30008EA99 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +156,7 @@
 		A1B51B1428BE186E0008EA99 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A15EB43328BFD08700EFCEA9 /* DishDetails */,
 				A1B51B4428BE75D00008EA99 /* Home */,
 				A1B51B1628BE187E0008EA99 /* Onboarding */,
 			);
@@ -173,6 +186,7 @@
 			children = (
 				A1B51B1A28BE1DD20008EA99 /* UiViewExtention.swift */,
 				A1B51B4F28BEC0860008EA99 /* StringExtention.swift */,
+				A15EB43628BFD64300EFCEA9 /* UIViewControllerExtention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -344,8 +358,10 @@
 				A15EB42528BF71E100EFCEA9 /* PopularDishCollectionViewCell.swift in Sources */,
 				A1B51B0228BD63A30008EA99 /* SceneDelegate.swift in Sources */,
 				A1B51B4E28BEB9F80008EA99 /* DishCategoryStruct.swift in Sources */,
+				A15EB43728BFD64300EFCEA9 /* UIViewControllerExtention.swift in Sources */,
 				A1B51B1D28BE248A0008EA99 /* OnboardingSlideStruct.swift in Sources */,
 				A15EB43128BFB0BE00EFCEA9 /* ChefSpecialsCollectionViewCell.swift in Sources */,
+				A15EB43528BFD0C000EFCEA9 /* DishDetailsViewController.swift in Sources */,
 				A1B51B1828BE1B2A0008EA99 /* OnboardingViewController.swift in Sources */,
 				A1B51B1B28BE1DD20008EA99 /* UiViewExtention.swift in Sources */,
 				A15EB42828BF74D500EFCEA9 /* PopularDishStruct.swift in Sources */,
