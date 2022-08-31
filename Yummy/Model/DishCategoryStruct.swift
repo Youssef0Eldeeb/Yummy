@@ -9,5 +9,5 @@ import Foundation
 
 
 struct DishCategoryStruct{
-    let id, name, image : String
+    let id, name, image : String?
 }
