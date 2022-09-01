@@ -17,7 +17,7 @@ class PopularDishCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     
-    func setup(dish: PopularDishStruct){
+    func setup(dish: DishStruct){
         titleLabel.text = dish.name
         dishImageView.kf.setImage(with: dish.image?.asUrl)
         caloriesLabel.text = dish.formattedCalories

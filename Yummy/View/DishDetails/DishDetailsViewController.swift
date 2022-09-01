@@ -15,7 +15,7 @@ class DishDetailsViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dishTextField: UITextField!
     
-    var dish: PopularDishStruct!
+    var dish: DishStruct!
     
     override func viewDidLoad() {
         super.viewDidLoad()

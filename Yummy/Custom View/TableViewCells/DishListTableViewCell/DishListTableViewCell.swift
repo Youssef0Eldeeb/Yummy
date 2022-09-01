@@ -15,11 +15,16 @@ class DishListTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    func setup(dish: PopularDishStruct){
+    func setup(dish: DishStruct){
         titleLabel.text = dish.name
         dishImageView.kf.setImage(with: dish.image?.asUrl)
         descriptionLabel.text = dish.description
     }
     
+    func setup(order: OrderStruct){
+        titleLabel.text = order.dish?.name
+        dishImageView.kf.setImage(with: order.dish?.image?.asUrl)
+        descriptionLabel.text = order.name
+    }
     
 }

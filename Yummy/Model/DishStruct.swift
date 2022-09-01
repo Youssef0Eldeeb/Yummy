@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PopularDishStruct{
+struct DishStruct{
     let id, name, description, image: String?
     let calories: Int?
  
