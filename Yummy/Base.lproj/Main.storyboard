@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452.30769230769226" y="65.402843601895725"/>
+            <point key="canvasLocation" x="-334" y="65"/>
         </scene>
         <!--Yummy-->
         <scene sceneID="AkM-ct-Z9z">
@@ -330,6 +330,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Yummy" id="YJa-NE-y0f">
+                        <barButtonItem key="backBarButtonItem" title=" " id="heS-IU-iLT"/>
                         <barButtonItem key="rightBarButtonItem" image="cart.circle.fill" catalog="system" id="Kdq-nM-Qzf">
                             <color key="tintColor" red="0.87910312410000002" green="0.22799068689999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -376,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOw-uy-IO2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="773"/>
+            <point key="canvasLocation" x="1601" y="759"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wjt-Zj-Pes">
@@ -394,7 +395,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgW-XA-zhD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672.30769230769226" y="61.848341232227483"/>
+            <point key="canvasLocation" x="763" y="62"/>
         </scene>
         <!--Dish Details View Controller-->
         <scene sceneID="ibp-6T-lfu">
@@ -404,7 +405,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EKj-UF-ndH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="EKj-UF-ndH">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="648"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jR-FM-8hv">
@@ -508,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMP-yk-BIX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2485.5140186915887" y="64.794816414686835"/>
+            <point key="canvasLocation" x="2505" y="62"/>
         </scene>
         <!--List Dishes View Controller-->
         <scene sceneID="KXn-SA-K6Y">
@@ -538,7 +539,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQT-vS-8bp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3360" y="65"/>
+            <point key="canvasLocation" x="3320" y="62"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

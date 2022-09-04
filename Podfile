@@ -8,6 +8,8 @@ target 'Yummy' do
   # Pods for Yummy
   
   pod "Kingfisher"
-
+  pod "Alamofire"
+  pod "IQKeyboardManagerSwift"
+  pod "ProgressHUD"
 
 end

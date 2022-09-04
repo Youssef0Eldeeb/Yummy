@@ -8,6 +8,12 @@
 import Foundation
 
 
-struct DishCategoryStruct{
+struct DishCategoryStruct: Codable{
     let id, name, image : String?
+    
+    enum CodingKeys: String, CodingKey{
+        case id, image
+        case name = "title"
+        
+    }
 }

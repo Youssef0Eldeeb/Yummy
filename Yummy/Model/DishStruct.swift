@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DishStruct{
+struct DishStruct: Codable{
     let id, name, description, image: String?
     let calories: Int?
  

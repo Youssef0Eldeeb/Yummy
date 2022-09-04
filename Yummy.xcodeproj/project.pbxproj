@@ -20,6 +20,9 @@
 		A15EB44428C015A900EFCEA9 /* ListDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EB44328C015A900EFCEA9 /* ListDishesViewController.swift */; };
 		A15EB44728C0BE8600EFCEA9 /* ListOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EB44628C0BE8600EFCEA9 /* ListOrdersViewController.swift */; };
 		A15EB44928C0C08F00EFCEA9 /* OrderStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EB44828C0C08F00EFCEA9 /* OrderStruct.swift */; };
+		A18D3ED928C413D70091AA16 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18D3ED828C413D70091AA16 /* NetworkService.swift */; };
+		A18D3EDB28C4192C0091AA16 /* AllDishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18D3EDA28C4192C0091AA16 /* AllDishes.swift */; };
+		A18D3EDD28C4CF570091AA16 /* ResponseStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18D3EDC28C4CF570091AA16 /* ResponseStruct.swift */; };
 		A1B51B0028BD63A30008EA99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51AFF28BD63A30008EA99 /* AppDelegate.swift */; };
 		A1B51B0228BD63A30008EA99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B51B0128BD63A30008EA99 /* SceneDelegate.swift */; };
 		A1B51B0728BD63A30008EA99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B51B0528BD63A30008EA99 /* Main.storyboard */; };
@@ -52,6 +55,9 @@
 		A15EB44328C015A900EFCEA9 /* ListDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesViewController.swift; sourceTree = "<group>"; };
 		A15EB44628C0BE8600EFCEA9 /* ListOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrdersViewController.swift; sourceTree = "<group>"; };
 		A15EB44828C0C08F00EFCEA9 /* OrderStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStruct.swift; sourceTree = "<group>"; };
+		A18D3ED828C413D70091AA16 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A18D3EDA28C4192C0091AA16 /* AllDishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDishes.swift; sourceTree = "<group>"; };
+		A18D3EDC28C4CF570091AA16 /* ResponseStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStruct.swift; sourceTree = "<group>"; };
 		A1B51AFC28BD63A30008EA99 /* Yummy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B51AFF28BD63A30008EA99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1B51B0128BD63A30008EA99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +157,14 @@
 			path = ListOrders;
 			sourceTree = "<group>";
 		};
+		A15EB44A28C15FD500EFCEA9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A18D3ED828C413D70091AA16 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		A1B51AF328BD63A30008EA99 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +186,7 @@
 		A1B51AFE28BD63A30008EA99 /* Yummy */ = {
 			isa = PBXGroup;
 			children = (
+				A15EB44A28C15FD500EFCEA9 /* Network */,
 				A1B51B1928BE1DA90008EA99 /* Extentions */,
 				A1B51B1528BE18760008EA99 /* Custom View */,
 				A1B51B1428BE186E0008EA99 /* View */,
@@ -193,6 +208,8 @@
 				A1B51B4D28BEB9F80008EA99 /* DishCategoryStruct.swift */,
 				A15EB42728BF74D500EFCEA9 /* DishStruct.swift */,
 				A15EB44828C0C08F00EFCEA9 /* OrderStruct.swift */,
+				A18D3EDA28C4192C0091AA16 /* AllDishes.swift */,
+				A18D3EDC28C4CF570091AA16 /* ResponseStruct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,6 +420,7 @@
 			files = (
 				A15EB44028C0108800EFCEA9 /* DishListTableViewCell.swift in Sources */,
 				A15EB44928C0C08F00EFCEA9 /* OrderStruct.swift in Sources */,
+				A18D3EDD28C4CF570091AA16 /* ResponseStruct.swift in Sources */,
 				A15EB44728C0BE8600EFCEA9 /* ListOrdersViewController.swift in Sources */,
 				A1B51B4B28BEB7F20008EA99 /* CatagoryCollectionViewCell.swift in Sources */,
 				A1B51B0028BD63A30008EA99 /* AppDelegate.swift in Sources */,
@@ -410,10 +428,12 @@
 				A1B51B0228BD63A30008EA99 /* SceneDelegate.swift in Sources */,
 				A1B51B4E28BEB9F80008EA99 /* DishCategoryStruct.swift in Sources */,
 				A15EB43728BFD64300EFCEA9 /* UIViewControllerExtention.swift in Sources */,
+				A18D3EDB28C4192C0091AA16 /* AllDishes.swift in Sources */,
 				A1B51B1D28BE248A0008EA99 /* OnboardingSlideStruct.swift in Sources */,
 				A15EB43128BFB0BE00EFCEA9 /* ChefSpecialsCollectionViewCell.swift in Sources */,
 				A15EB43528BFD0C000EFCEA9 /* DishDetailsViewController.swift in Sources */,
 				A1B51B1828BE1B2A0008EA99 /* OnboardingViewController.swift in Sources */,
+				A18D3ED928C413D70091AA16 /* NetworkService.swift in Sources */,
 				A1B51B1B28BE1DD20008EA99 /* UiViewExtention.swift in Sources */,
 				A15EB42828BF74D500EFCEA9 /* DishStruct.swift in Sources */,
 				A1B51B5028BEC0870008EA99 /* StringExtention.swift in Sources */,

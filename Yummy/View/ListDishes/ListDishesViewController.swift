@@ -13,9 +13,7 @@ class ListDishesViewController: UIViewController {
     
     var category: DishCategoryStruct!
     
-    var dishes: [DishStruct] = [
-        .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories this foood is very very yummy but contains on alots of calories this foood is very very yummy but contains on alots of calories this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 200),.init(id: "1", name: "fosfjsdf", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 20),.init(id: "1", name: "afsadfaf", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 332),.init(id: "1", name: "eojfkejlkjk", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323)
-    ]
+    var dishes: [DishStruct] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         dishesTableView.delegate = self
@@ -23,27 +21,48 @@ class ListDishesViewController: UIViewController {
         
         title = category.name
         registerCell()
+        fetchingDataFromAPI()
     }
+    
     private func registerCell(){
         dishesTableView.register(UINib(nibName: DishListTableViewCell.identifire, bundle: nil), forCellReuseIdentifier: DishListTableViewCell.identifire)
+    }
+    
+    private func fetchingDataFromAPI(){
+        let id = category.id ?? ""
+        NetworkService().fetch(path: "dishes/\(id)", responseClass: WelcomeDishes.self) { response in
+            switch response{
+            case .success(let data):
+                guard let data = data else {return}
+                self.dishes = data.data ?? []
+                self.dishesTableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
 
 }
 
 
+
+// MARK: - Extention of Delegate and DataSource to TableView
 extension ListDishesViewController: UITableViewDelegate, UITableViewDataSource{
+    
+//numberOfRowsInSection
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dishes.count
     }
     
+//cellForRowAt
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DishListTableViewCell.identifire, for: indexPath) as! DishListTableViewCell
-        
         cell.setup(dish: dishes[indexPath.row])
-        
         return cell
     }
+    
+//didSelectRowAt
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = DishDetailsViewController.instantiate()
         controller.dish = dishes[indexPath.row]

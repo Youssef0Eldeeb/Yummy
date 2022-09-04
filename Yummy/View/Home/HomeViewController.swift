@@ -6,24 +6,17 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var categoryCollectionView: UICollectionView!
-    
     @IBOutlet weak var popularCollectioinView: UICollectionView!
-    
     @IBOutlet weak var chefSpiecialCollectionView: UICollectionView!
     
-    var categories: [DishCategoryStruct] = [.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354"),.init(id: "1", name: "Chicken", image: "https://picsum.photos/536/354")]
-    
-    var populars: [DishStruct] = [
-        .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of caloriesthis foood is very very yummy but contains on alots of caloriesthis foood is very very yummy but contains on alots of caloriesthis foood is very very yummy but contains on alots of caloriesthis foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 200),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 20),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 332),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323)
-    ]
-    
-    var specials: [DishStruct] = [
-        .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 200),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 20),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 332),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323),.init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 323)
-    ]
+    var categories: [DishCategoryStruct] = []
+    var populars: [DishStruct] = []
+    var specials: [DishStruct] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +30,7 @@ class HomeViewController: UIViewController {
         chefSpiecialCollectionView.dataSource = self
         
         registerCell()
+        fetchingDataFromAPI()
     }
     
     private func registerCell(){
@@ -44,12 +38,35 @@ class HomeViewController: UIViewController {
         popularCollectioinView.register(UINib(nibName: PopularDishCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: PopularDishCollectionViewCell.identifire)
         chefSpiecialCollectionView.register(UINib(nibName: ChefSpecialsCollectionViewCell.identifire, bundle: nil), forCellWithReuseIdentifier: ChefSpecialsCollectionViewCell.identifire)
     }
+    
+    private func fetchingDataFromAPI(){
+        ProgressHUD.show()
+        NetworkService().fetch(path: "dish-categories", responseClass: WelcomeHome.self) { response in
+            switch response{
+            case .success(let data):
+                ProgressHUD.dismiss()
+                guard let data = data else {return}
+                self.categories = data.data?.categories ?? []
+                self.populars = data.data?.populars ?? []
+                self.specials = data.data?.specials ?? []
+                self.categoryCollectionView.reloadData()
+                self.popularCollectioinView.reloadData()
+                self.chefSpiecialCollectionView.reloadData()
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+            
+        }
+    }
 }
 
 
 
+// MARK: - Extention of Delegate and DataSource to CollectionView
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    
+//numberOfItemsInSection
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case categoryCollectionView:
@@ -62,29 +79,29 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
+//cellForItemAt
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
         case categoryCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CatagoryCollectionViewCell.identifire, for: indexPath) as! CatagoryCollectionViewCell
             cell.setup(category: categories[indexPath.row])
-            
             return cell
+            
         case popularCollectioinView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularDishCollectionViewCell.identifire, for: indexPath) as! PopularDishCollectionViewCell
             cell.setup(dish: populars[indexPath.row])
-            
             return cell
+            
         case chefSpiecialCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChefSpecialsCollectionViewCell.identifire, for: indexPath) as! ChefSpecialsCollectionViewCell
             cell.setup(dish: specials[indexPath.row])
-            
             return cell
+            
         default: return UICollectionViewCell()
         }
-        
-        
     }
     
+//didSelectItemAt
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == categoryCollectionView {
             let controller = ListDishesViewController.instantiate()

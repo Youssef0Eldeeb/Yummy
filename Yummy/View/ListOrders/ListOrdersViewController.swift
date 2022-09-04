@@ -6,14 +6,13 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class ListOrdersViewController: UIViewController {
 
     @IBOutlet weak var listOrderTableView: UITableView!
 
-    var orders: [OrderStruct] = [
-        .init(id: "1", name: "Seafood", dish: .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233)),.init(id: "1", name: "Seafood", dish: .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233)),.init(id: "1", name: "Seafood", dish: .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233)),.init(id: "1", name: "Seafood", dish: .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233)),.init(id: "1", name: "Seafood", dish: .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233)),.init(id: "1", name: "Seafood", dish: .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233)),.init(id: "1", name: "Seafood", dish: .init(id: "1", name: "Green", description: "this foood is very very yummy but contains on alots of calories ", image: "https://picsum.photos/536/354", calories: 233))
-    ]
+    var orders: [OrderStruct] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,24 +20,45 @@ class ListOrdersViewController: UIViewController {
         listOrderTableView.dataSource = self
         
         registerCell()
+        fetchingDataFromAPI()
     }
     
     private func registerCell(){
         listOrderTableView.register(UINib(nibName: DishListTableViewCell.identifire, bundle: nil), forCellReuseIdentifier: DishListTableViewCell.identifire)
     }
+    private func fetchingDataFromAPI(){
+        ProgressHUD.show()
+        NetworkService().fetch(path: "orders", responseClass: WelcomeOrders.self) { response in
+            switch response{
+            case .success(let data):
+                ProgressHUD.dismiss()
+                guard let data = data else {return}
+                self.orders = data.data ?? []
+                self.listOrderTableView.reloadData()
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
+    }
 }
 
+
+// MARK: - Extention of Delegate and DataSource to Tabelview
 extension ListOrdersViewController: UITableViewDelegate, UITableViewDataSource{
+    
+//numberOfRowsInSection
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return orders.count
     }
-    
+
+//cellForRowAt
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DishListTableViewCell.identifire, for: indexPath) as! DishListTableViewCell
         cell.setup(order: orders[indexPath.row])
         return cell
     }
-    
+
+//didSelectRowAt
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = DishDetailsViewController.instantiate()
         controller.dish = orders[indexPath.row].dish

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class DishDetailsViewController: UIViewController {
 
@@ -31,6 +32,21 @@ class DishDetailsViewController: UIViewController {
     }
 
     @IBAction func palceOrderBtn(_ sender: Any) {
+        guard let name = dishTextField.text?.trimmingCharacters(in: .whitespaces), !name.isEmpty else{
+            ProgressHUD.showError("Please enter your name")
+            return
+        }
+        ProgressHUD.show("Placing Order...")
+        NetworkService().send(name: name, dishId: dish.id ?? "", responseClass: OrderStruct.self) { response in
+            switch response{
+            case .success(_):
+                ProgressHUD.showSuccess("Your order has been received. 👨🏼‍🍳")
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
+        
+        
     }
     
 }
